@@ -745,3 +745,26 @@
     }
   
   }
+
+  /* Keep the notebook canvas authoritative over legacy theme rules above. */
+  body {
+    position: static;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    color: var(--ink);
+    background-color: var(--paper);
+    background-image:
+      linear-gradient(rgba(25, 27, 26, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(25, 27, 26, 0.035) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  body.darkmode {
+    color: var(--ink);
+    background-color: var(--paper);
+    background-image:
+      linear-gradient(rgba(240, 238, 231, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(240, 238, 231, 0.035) 1px, transparent 1px);
+  }
