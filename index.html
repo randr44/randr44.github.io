@@ -11,29 +11,29 @@
   <meta charset="utf-8">
 
   
-  <title>Richard's Blog</title>
+  <title>Richard Andrews — Data Structures & Algorithms</title>
   
   <link rel="canonical" href="https://randr44.github.io/">
   
-  <meta name="description" content="A Software Engineer from California, currently residing in Billings, M.T (quite a change, but I love it!!). Post random things about frontend, fullstack, chrome v8, computer science, etc.">
+  <meta name="description" content="A working notebook about data structures, algorithms, and the reasoning behind them.">
   
   
   <meta name="author" content="Richard A.">
   
   <meta property="og:image" content="https://randr44.github.io/images/thumbnail.jpg">
   
-  <meta property="og:site_name" content="Richard's Blog" />
+  <meta property="og:site_name" content="Richard Andrews" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Richard's Blog" />
+  <meta property="og:title" content="Richard Andrews — Data Structures & Algorithms" />
   
-  <meta property="og:description" content="A Software Engineer from California, currently residing in Billings, M.T (quite a change, but I love it!!). Post random things about frontend, fullstack, chrome v8, computer science, etc.">
+  <meta property="og:description" content="A working notebook about data structures, algorithms, and the reasoning behind them.">
   
   <meta property="og:url" content="https://randr44.github.io/" />
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Richard&#39;s Blog">
+  <meta name="twitter:title" content="Richard Andrews — Data Structures &amp; Algorithms">
   
-  <meta name="twitter:description" content="A Software Engineer from California, currently residing in Billings, M.T (quite a change, but I love it!!). Post random things about frontend, fullstack, chrome v8, computer science, etc.">
+  <meta name="twitter:description" content="A working notebook about data structures, algorithms, and the reasoning behind them.">
   
   
   <meta name="twitter:image" content="https://randr44.github.io/images/thumbnail.jpg">
@@ -65,13 +65,6 @@
 
   
 <link rel="stylesheet" href="/css/prism-line-numbers.css">
-
-  <!-- User css -->
-  
-  
-<link rel="stylesheet" href="/css/user.css">
-
-  
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -131,140 +124,115 @@
     <div class="row">
       <div>
 
-        <div class="row">
-  <div class="two columns" style="max-width: 50px">
-    <h1 class="mt-2 mode">
-      <div onclick=setDarkMode(true) id="darkBtn">🌑</div>
-      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>☀️</div>
+        <header class="site-header">
+  <a class="site-name" href="/" aria-label="Richard Andrews home">
+    <span class="site-mark" aria-hidden="true">RA</span>
+    <span>Richard Andrews</span>
+  </a>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="/">Home</a>
+    <a href="#topics">Topics</a>
+    <a href="/archives">Notes</a>
+    <a href="/About">About</a>
+  </nav>
+
+  <button class="theme-toggle" type="button" onclick="setDarkMode()" aria-label="Toggle color theme">
+    <span id="themeIcon" aria-hidden="true">◐</span>
+  </button>
       <script >
-        if (localStorage.getItem('preferredTheme') == 'dark') {
-          setDarkMode(true)
-        }
-        function setDarkMode(isDark) {
-          var darkBtn = document.getElementById('darkBtn')
-          var lightBtn = document.getElementById('lightBtn')
+        var isDark = localStorage.getItem('preferredTheme') === 'dark'
+        document.body.classList.toggle('darkmode', isDark)
+
+        function setDarkMode() {
+          isDark = !document.body.classList.contains('darkmode')
+          document.body.classList.toggle('darkmode', isDark)
           if (isDark) {
-            lightBtn.style.display = "block"
-            darkBtn.style.display = "none"
-            localStorage.setItem('preferredTheme', 'dark');
+            localStorage.setItem('preferredTheme', 'dark')
           } else {
-            lightBtn.style.display = "none"
-            darkBtn.style.display = "block"
-            localStorage.removeItem('preferredTheme');
+            localStorage.removeItem('preferredTheme')
           }
-          document.body.classList.toggle("darkmode");
         }
       </script>
-    </h1>
-  </div>
-
-  <div class="six columns ml-1">
-    <h1 class="mt-2">
-      Hi Folks.
-    </h1>
-  </div>
-
-  <div class="twelve columns">
-    <div class="row">
-      <div class="nine columns left">
-        <a href="/">Home</a>
-        
-          
-          <a href="/Works" class="ml">Works</a>
-          
-        
-          
-          <a href="/About" class="ml">About</a>
-          
-        
-        
-          
-            <a href="" target="_blank" class="ml">Email</a>
-          
-        
-      </div>
-    </div>
-    <hr style="margin-bottom: 2.6rem">
-  </div>
-</div>
+        </header>
 
         <div class="trans">
-          <div class="row">
-  <div class="column">
-    <!-- Main information, edit it on theme/_config.yml -->
-    <h2 class="mb-2">I'm Richard Andrews</h2>
-    <p>A Software Engineer, who went from working as a Intern, to a Full Stack Developer
-      to the Software Quality Assurance Lead at Reciprocity Industries.</p>
-    <p>I love reading technical books📖, and learning new things.</p>
-    <p>Bachelor's in Computer Science.</p>
-    <p>Experienced in implementing maintainable software solutions.</p>
-      My current focus is on improving code quality while implementing testing 
-      best practices. Anyway, welcome to my blog! Hope you enjoy it😊.</p>
-  </div>
-</div>
+          <main>
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="eyebrow">A working computer science notebook</p>
+    <h1 id="hero-title">Data structures, algorithms, and the reasoning behind them.</h1>
+    <p class="hero-copy">I’m Richard, a software engineer studying core computer science through implementation, experimentation, and clear explanation.</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="#topics">Explore the learning path</a>
+      <a class="text-link" href="#latest">Read the latest notes <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
 
-<h3>Recent Post</h3>
+  <section class="section" id="topics" aria-labelledby="topics-title">
+    <div class="section-heading">
+      <p class="eyebrow">Learning paths</p>
+      <h2 id="topics-title">Start with a question.</h2>
+      <p>Move from foundations to techniques, with implementations and complexity analysis along the way.</p>
+    </div>
+    <div class="topic-grid">
+      <a class="topic-card" href="/tags/sicps/">
+        <span class="topic-number">01</span>
+        <h3>Foundations</h3>
+        <p>Abstraction, complexity, recursion, and the models that make algorithms easier to reason about.</p>
+        <span class="topic-meta">Begin here →</span>
+      </a>
+      <a class="topic-card" href="/2022/07/25/SICPJS-2-Building-Abstractions-with-Data/">
+        <span class="topic-number">02</span>
+        <h3>Data structures</h3>
+        <p>Linked lists, stacks, queues, hash tables, trees, heaps, and graphs built from first principles.</p>
+        <span class="topic-meta">Explore structures →</span>
+      </a>
+      <a class="topic-card" href="/archives">
+        <span class="topic-number">03</span>
+        <h3>Algorithms</h3>
+        <p>Searching, sorting, traversal, and dynamic programming with step-by-step traces.</p>
+        <span class="topic-meta">Study techniques →</span>
+      </a>
+      <a class="topic-card" href="/archives">
+        <span class="topic-number">04</span>
+        <h3>Problem solving</h3>
+        <p>Reusable patterns, tradeoffs, and a disciplined process for turning ideas into working code.</p>
+        <span class="topic-meta">Practice patterns →</span>
+      </a>
+    </div>
+  </section>
 
+  <section class="focus-band" aria-labelledby="focus-title">
+    <div>
+      <p class="eyebrow">Currently exploring</p>
+      <h2 id="focus-title">How structure changes the cost of an operation.</h2>
+    </div>
+    <p>Starting with linked lists: tracing references, comparing insertion strategies, and making time and space complexity visible.</p>
+  </section>
 
-<div class="row">
-
-  <div class="three columns left lit">
-    <p class="bottom">Jul 24, 2022</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/2022/07/24/Some-Common-Mistakes-in-React-Testing/" >
-      
-        Some-Common-Mistakes-in-React-Testing
-      
-    </a>
-  </div>
-</div>
-
-<div class="row">
-
-  <div class="three columns left lit">
-    <p class="bottom">Jul 24, 2022</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/2022/07/24/Testing-Best-Practice-Tdd/" >
-      
-        Testing-Best-Practice-Tdd
-      
-    </a>
-  </div>
-</div>
-
-<div class="row">
-
-  <div class="three columns left lit">
-    <p class="bottom">July 25, 2022</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/2022/07/25/SICPJS-2-Building-Abstractions-with-Data/" >
-      
-        SICPJS 2. Building Abstractions with Data
-      
-    </a>
-  </div>
-</div>
-          
-<div class="row">
-
-  <div class="three columns left lit">
-    <p class="bottom">September 14, 2025</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/2022/07/25/SICPJS-2-Building-Abstractions-with-Data/" >
-      
-        Data Structures 1. Linked List 
-      
-    </a>
-  </div>
-</div>
-
-
-
-<h4> <a href="/archives">All Posts</a></h4>
+  <section class="section notes-section" id="latest" aria-labelledby="latest-title">
+    <div class="section-heading section-heading-inline">
+      <div>
+        <p class="eyebrow">From the notebook</p>
+        <h2 id="latest-title">Latest notes</h2>
+      </div>
+      <a class="text-link" href="/archives">View the archive <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="note-list">
+      <a class="note-row" href="/2022/07/25/SICPJS-2-Building-Abstractions-with-Data/">
+        <span class="note-topic">Data structures</span>
+        <strong>Linked lists: structure, traversal, and tradeoffs</strong>
+        <time datetime="2025-09-14">Sep 14, 2025</time>
+      </a>
+      <a class="note-row" href="/2022/07/25/SICPJS-2-Building-Abstractions-with-Data/">
+        <span class="note-topic">Foundations</span>
+        <strong>Building abstractions with data</strong>
+        <time datetime="2022-07-25">Jul 25, 2022</time>
+      </a>
+    </div>
+    <p class="archive-note">Earlier writing on testing and frontend engineering remains available in the <a href="/archives">complete archive</a>.</p>
+  </section>
+</main>
 
           <div class="row mt-2">
   

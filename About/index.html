@@ -11,29 +11,29 @@
   <meta charset="utf-8">
 
   
-  <title>About - Richard A</title>
+  <title>About — Richard Andrews</title>
   
   <link rel="canonical" href="https://randr44.github.io/About/">
   
-  <meta name="description" content="">
+  <meta name="description" content="About Richard Andrews and his working notebook on data structures, algorithms, and problem solving.">
   
   
   <meta name="author" content="Richard A.">
   
   <meta property="og:image" content="https://randr44.github.ioundefined">
   
-  <meta property="og:site_name" content="Richard&#39;s Blog" />
+  <meta property="og:site_name" content="Richard Andrews" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="About - Richard A." />
   
-  <meta property="og:description" content="">
+  <meta property="og:description" content="About Richard Andrews and his working notebook on data structures, algorithms, and problem solving.">
   
   <meta property="og:url" content="https://randr44.github.io/About/" />
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About - Richard A">
   
-  <meta name="twitter:description" content="">
+  <meta name="twitter:description" content="About Richard Andrews and his working notebook on data structures, algorithms, and problem solving.">
   
   
   <meta name="twitter:image" content="https://randr44.github.ioundefined">
@@ -65,13 +65,6 @@
 
   
 <link rel="stylesheet" href="/css/prism-line-numbers.css">
-
-  <!-- User css -->
-  
-  
-<link rel="stylesheet" href="/css/user.css">
-
-  
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -131,77 +124,82 @@
     <div class="row">
       <div>
 
-        <div class="row">
-  <div class="two columns" style="max-width: 50px">
-    <h1 class="mt-2 mode">
-      <div onclick=setDarkMode(true) id="darkBtn">🌑</div>
-      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>☀️</div>
+        <header class="site-header">
+  <a class="site-name" href="/" aria-label="Richard Andrews home">
+    <span class="site-mark" aria-hidden="true">RA</span>
+    <span>Richard Andrews</span>
+  </a>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="/">Home</a>
+    <a href="/#topics">Topics</a>
+    <a href="/archives">Notes</a>
+    <a href="/About">About</a>
+  </nav>
+
+  <button class="theme-toggle" type="button" onclick="setDarkMode()" aria-label="Toggle color theme">
+    <span id="themeIcon" aria-hidden="true">◐</span>
+  </button>
       <script >
-        if (localStorage.getItem('preferredTheme') == 'dark') {
-          setDarkMode(true)
-        }
-        function setDarkMode(isDark) {
-          var darkBtn = document.getElementById('darkBtn')
-          var lightBtn = document.getElementById('lightBtn')
+        var isDark = localStorage.getItem('preferredTheme') === 'dark'
+        document.body.classList.toggle('darkmode', isDark)
+
+        function setDarkMode() {
+          isDark = !document.body.classList.contains('darkmode')
+          document.body.classList.toggle('darkmode', isDark)
           if (isDark) {
-            lightBtn.style.display = "block"
-            darkBtn.style.display = "none"
-            localStorage.setItem('preferredTheme', 'dark');
+            localStorage.setItem('preferredTheme', 'dark')
           } else {
-            lightBtn.style.display = "none"
-            darkBtn.style.display = "block"
-            localStorage.removeItem('preferredTheme');
+            localStorage.removeItem('preferredTheme')
           }
-          document.body.classList.toggle("darkmode");
         }
       </script>
-    </h1>
-  </div>
-
-  <div class="six columns ml-1">
-    <h1 class="mt-2">
-      Hi Folks.
-    </h1>
-  </div>
-
-  <div class="twelve columns">
-    <div class="row">
-      <div class="nine columns left">
-        <a href="/">Home</a>
-        
-          
-          <a href="/Works" class="ml">Works</a>
-          
-        
-          
-          <a href="/About" class="ml">About</a>
-          
-        
-        
-          
-            <a href="mailto:xff9924@gmail.com" target="_blank" class="ml">Email</a>
-          
-        
-      </div>
-    </div>
-    <hr style="margin-bottom: 2.6rem">
-  </div>
-</div>
+        </header>
 
         <div class="trans">
-            <h2>About</h2>
+            <main class="about-page">
+  <section class="about-intro">
+    <p class="eyebrow">About me</p>
+    <h1>I learn by building the idea, tracing it, and explaining what changed.</h1>
+    <p class="about-lead">I’m Richard Andrews, a software engineer with experience across full-stack development and software quality. My current focus is data structures, algorithms, and the problem-solving techniques that connect computer science theory to dependable software.</p>
+  </section>
 
-  <p>Every Day is 🎆</p>
+  <section class="about-grid" aria-labelledby="notebook-title">
+    <div>
+      <p class="eyebrow">The notebook</p>
+      <h2 id="notebook-title">Why I write</h2>
+    </div>
+    <div>
+      <p>I use this site to work through ideas carefully: implementing structures from first principles, comparing tradeoffs, tracing algorithms step by step, and documenting what I learn.</p>
+      <p>The goal is not to present perfect answers. It is to build precise mental models and leave behind explanations that make difficult concepts easier to revisit.</p>
+    </div>
+  </section>
 
-<div id="gitalk-container"></div>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <section class="about-grid" aria-labelledby="exploring-title">
+    <div>
+      <p class="eyebrow">Current focus</p>
+      <h2 id="exploring-title">What I’m exploring</h2>
+    </div>
+    <ul class="focus-list">
+      <li>Trees, graphs, and traversal strategies</li>
+      <li>Search, sorting, and complexity analysis</li>
+      <li>Recursion, dynamic programming, and reusable patterns</li>
+      <li>Clear implementations in JavaScript, TypeScript, and Python</li>
+    </ul>
+  </section>
 
-		<script>
-		var gitalkConfig = {"clientID":"00d11cdc8226f273b700","clientSecret":"57f31810d3530079f29b3327f47e445f19f5efeb","repo":"gitalk","owner":"clean99","admin":["clean99"],"distractionFreeMode":false};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render("gitalk-container");
-	    </script>
+  <section class="about-grid" aria-labelledby="connect-title">
+    <div>
+      <p class="eyebrow">Elsewhere</p>
+      <h2 id="connect-title">Let’s connect</h2>
+    </div>
+    <div class="connect-links">
+      <a class="text-link" href="https://github.com/randr44" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a class="text-link" href="https://www.linkedin.com/in/rlandrews44" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      <a class="text-link" href="mailto:xff9924@gmail.com">Email ↗</a>
+    </div>
+  </section>
+</main>
 
           <div class="row mt-2">
   
