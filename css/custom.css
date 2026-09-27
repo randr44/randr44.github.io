@@ -267,6 +267,15 @@
     transform: translateY(-2px);
   }
 
+  .topic-card-planned {
+    background-color: rgba(102, 105, 99, 0.04);
+  }
+
+  .topic-card-planned:hover {
+    background-color: rgba(102, 105, 99, 0.04);
+    transform: none;
+  }
+
   .topic-number,
   .topic-meta,
   .note-topic,
