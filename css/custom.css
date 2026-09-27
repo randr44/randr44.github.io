@@ -79,20 +79,6 @@
     --secondary: #176b68;
   }
 
-  body {
-    position: static;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow-y: auto;
-    color: var(--ink);
-    background-color: var(--paper);
-    background-image:
-      linear-gradient(rgba(25, 27, 26, 0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(25, 27, 26, 0.035) 1px, transparent 1px);
-    background-size: 32px 32px;
-  }
-
   body.darkmode {
     --paper: #171918;
     --paper-deep: #222624;
@@ -102,11 +88,6 @@
     --accent: #ed795b;
     --accent-dark: #f39a82;
     --secondary: #65b9ae;
-    color: var(--ink);
-    background-color: var(--paper);
-    background-image:
-      linear-gradient(rgba(240, 238, 231, 0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(240, 238, 231, 0.035) 1px, transparent 1px);
   }
 
   body > .container {

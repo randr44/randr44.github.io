@@ -137,23 +137,10 @@
     <a href="/About">About</a>
   </nav>
 
-  <button class="theme-toggle" type="button" onclick="setDarkMode()" aria-label="Toggle color theme">
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false">
     <span id="themeIcon" aria-hidden="true">◐</span>
   </button>
-      <script >
-        var isDark = localStorage.getItem('preferredTheme') === 'dark'
-        document.body.classList.toggle('darkmode', isDark)
-
-        function setDarkMode() {
-          isDark = !document.body.classList.contains('darkmode')
-          document.body.classList.toggle('darkmode', isDark)
-          if (isDark) {
-            localStorage.setItem('preferredTheme', 'dark')
-          } else {
-            localStorage.removeItem('preferredTheme')
-          }
-        }
-      </script>
+  <script src="/js/theme.js"></script>
         </header>
 
         <div class="trans">
