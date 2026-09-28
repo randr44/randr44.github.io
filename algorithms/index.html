@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Algorithms — Richard Andrews</title>
+  <link rel="canonical" href="https://randr44.github.io/algorithms/">
+  <meta name="description" content="A study guide for algorithmic techniques, from complexity and invariants to searching, sorting, and sequence patterns.">
+  <meta name="author" content="Richard A.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="/fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css?v=20260927">
+  <link rel="stylesheet" href="/css/prism-dark.css">
+  <link rel="stylesheet" href="/css/prism-line-numbers.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div>
+        <header class="site-header">
+          <a class="site-name" href="/" aria-label="Richard Andrews home">
+            <span class="site-mark" aria-hidden="true">RA</span>
+            <span>Richard Andrews</span>
+          </a>
+
+          <nav class="site-nav" aria-label="Primary navigation">
+            <a href="/">Home</a>
+            <a href="/explore/">Explore</a>
+            <a href="/notes/">Notes</a>
+            <a href="/About">About</a>
+          </nav>
+
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false">
+            <span aria-hidden="true">&#9680;</span>
+          </button>
+          <script src="/js/theme.js"></script>
+        </header>
+
+        <div class="trans">
+          <main class="about-page algorithms-page">
+            <section class="about-intro">
+              <p class="eyebrow">Learning path 03</p>
+              <h1>Algorithms</h1>
+              <p class="about-lead">A study guide for recognizing a problem, choosing a technique, and understanding what the solution costs.</p>
+              <p>The examples will be added as they are implemented and tested. For now, this page defines the sequence and the questions each technique should answer.</p>
+            </section>
+
+            <section class="about-grid" aria-labelledby="approach-title">
+              <div>
+                <p class="eyebrow">The approach</p>
+                <h2 id="approach-title">Do not memorize the pattern before understanding the problem.</h2>
+              </div>
+              <div>
+                <p>For each technique, start with the shape of the input and the operation that is too expensive. Then identify the invariant that lets the algorithm avoid repeating work.</p>
+                <ul class="focus-list">
+                  <li>What information must remain true after each step?</li>
+                  <li>Which work can be reused instead of repeated?</li>
+                  <li>What input or boundary case breaks the first idea?</li>
+                  <li>How does the running time change as the input grows?</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="section algorithm-list-section" aria-labelledby="techniques-title">
+              <div class="section-heading">
+                <p class="eyebrow">Study sequence</p>
+                <h2 id="techniques-title">Techniques to work through.</h2>
+              </div>
+              <div class="note-list">
+                <div class="note-row">
+                  <span class="note-topic">01 · First principles</span>
+                  <strong>Complexity and invariants</strong>
+                  <span class="note-meta">Describe the cost and the condition that stays true</span>
+                </div>
+                <div class="note-row">
+                  <span class="note-topic">02 · Sequence patterns</span>
+                  <strong>Two pointers and sliding window</strong>
+                  <span class="note-meta">Turn repeated range work into a controlled scan</span>
+                </div>
+                <div class="note-row">
+                  <span class="note-topic">03 · Search</span>
+                  <strong>Binary search and search spaces</strong>
+                  <span class="note-meta">Use ordering to discard half of the remaining work</span>
+                </div>
+                <div class="note-row">
+                  <span class="note-topic">04 · Ordering</span>
+                  <strong>Sorting and divide-and-conquer</strong>
+                  <span class="note-meta">Break a problem apart, solve the pieces, and combine them</span>
+                </div>
+                <div class="note-row">
+                  <span class="note-topic">05 · Structure</span>
+                  <strong>Tree and graph traversal</strong>
+                  <span class="note-meta">Explore connected state without losing track of what was visited</span>
+                </div>
+                <div class="note-row">
+                  <span class="note-topic">06 · State</span>
+                  <strong>Recursion, backtracking, and dynamic programming</strong>
+                  <span class="note-meta">Make choices, remember useful results, and avoid duplicate work</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="about-grid" aria-labelledby="note-format-title">
+              <div>
+                <p class="eyebrow">For every future note</p>
+                <h2 id="note-format-title">Question. Trace. Tradeoff.</h2>
+              </div>
+              <div>
+                <p>Each finished study note will include a concrete problem, a worked trace, an implementation, the invariant behind it, complexity analysis, and a comparison with the obvious alternative.</p>
+                <p><a class="text-link" href="/notes/">See the current notebook <span aria-hidden="true">&#8594;</span></a></p>
+              </div>
+            </section>
+          </main>
+
+          <div class="row mt-2">
+            <div class="eight columns">
+              <p id="madewith">Made with &hearts; and <a href="https://hexo.io" target="_blank" rel="noreferrer">Hexo</a> at <a href="https://en.wikipedia.org/wiki/Earth" target="_blank" rel="noreferrer">Earth</a>.</p>
+            </div>
+            <div class="four columns mb-3 posisi">
+              <a class="ml-0 footer-link icon" href="https://github.com/randr44" target="_blank" rel="noreferrer" aria-label="GitHub">GitHub</a>
+              <a class="ml-0 footer-link icon" href="https://www.linkedin.com/in/rlandrews44" target="_blank" rel="noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/nanobar.min.js"></script>
+  <script>
+    var nanobar = new Nanobar({ classname: 'nanobar', id: 'myNanobar' });
+    nanobar.go(30);
+  </script>
+</body>
+</html>
