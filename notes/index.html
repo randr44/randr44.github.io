@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Notes — Richard Andrews</title>
+  <link rel="canonical" href="https://randr44.github.io/notes/">
+  <meta name="description" content="Notes on data structures, algorithms, and the reasoning behind them.">
+  <meta name="author" content="Richard A.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="/fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css?v=20260927">
+  <link rel="stylesheet" href="/css/prism-dark.css">
+  <link rel="stylesheet" href="/css/prism-line-numbers.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <style>
+    a:not(.icon) {
+      text-decoration-color: #0FA0CE;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #0FA0CE 50%);
+    }
+    blockquote { border-left: 8px solid #0FA0CE; }
+    .nanobar .bar { background: #0FA0CE; }
+    .button.button-primary:hover,
+    button.button-primary:hover,
+    input[type="submit"].button-primary:hover,
+    input[type="reset"].button-primary:hover,
+    input[type="button"].button-primary:hover,
+    .button.button-primary:focus,
+    button.button-primary:focus,
+    input[type="submit"].button-primary:focus,
+    input[type="reset"].button-primary:focus,
+    input[type="button"].button-primary:focus { background-color: #0FA0CE; border-color: #0FA0CE; }
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    input[type="search"]:focus,
+    input[type="text"]:focus,
+    input[type="tel"]:focus,
+    input[type="url"]:focus,
+    input[type="password"]:focus,
+    textarea:focus,
+    select:focus { border: 1px solid #0FA0CE; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div>
+        <header class="site-header">
+          <a class="site-name" href="/" aria-label="Richard Andrews home">
+            <span class="site-mark" aria-hidden="true">RA</span>
+            <span>Richard Andrews</span>
+          </a>
+
+          <nav class="site-nav" aria-label="Primary navigation">
+            <a href="/">Home</a>
+            <a href="/#topics">Topics</a>
+            <a href="/notes/">Notes</a>
+            <a href="/About">About</a>
+          </nav>
+
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false">
+            <span id="themeIcon" aria-hidden="true">&#9680;</span>
+          </button>
+          <script src="/js/theme.js"></script>
+        </header>
+
+        <div class="trans">
+          <main class="about-page notes-page">
+            <section class="about-intro">
+              <p class="eyebrow">From the notebook</p>
+              <h1>Notes</h1>
+              <p class="about-lead">Working notes on data structures, algorithms, and the reasoning behind them.</p>
+            </section>
+
+            <section class="about-grid" aria-labelledby="current-title">
+              <div>
+                <p class="eyebrow">Current work</p>
+                <h2 id="current-title">Sequence-based problem solving.</h2>
+              </div>
+              <div class="note-list">
+                <div class="note-row">
+                  <span class="note-topic">Data structures · Coming soon</span>
+                  <strong>Linked lists: structure, traversal, and tradeoffs</strong>
+                </div>
+                <div class="note-row">
+                  <span class="note-topic">Foundations · Coming soon</span>
+                  <strong>Foundations for sequence-based problem solving</strong>
+                </div>
+              </div>
+            </section>
+
+            <section class="about-grid" aria-labelledby="archive-title">
+              <div>
+                <p class="eyebrow">Earlier writing</p>
+                <h2 id="archive-title">The archive.</h2>
+              </div>
+              <div>
+                <p>Older notes on testing and frontend engineering remain available while the new data-structures material is developed.</p>
+                <p><a class="text-link" href="/archives">Browse the historical archive <span aria-hidden="true">&#8594;</span></a></p>
+              </div>
+            </section>
+          </main>
+
+          <div class="row mt-2">
+            <div class="eight columns">
+              <p id="madewith">Made with &hearts; and <a href="https://hexo.io" target="_blank" rel="noreferrer">Hexo</a> at <a href="https://en.wikipedia.org/wiki/Earth" target="_blank" rel="noreferrer">Earth</a>.</p>
+            </div>
+            <div class="four columns mb-3 posisi">
+              <a class="ml-0 footer-link icon" href="https://github.com/randr44" target="_blank" rel="noreferrer" aria-label="GitHub">GitHub</a>
+              <a class="ml-0 footer-link icon" href="https://www.linkedin.com/in/rlandrews44" target="_blank" rel="noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/nanobar.min.js"></script>
+  <script>
+    var nanobar = new Nanobar({ classname: 'nanobar', id: 'myNanobar' });
+    nanobar.go(30);
+  </script>
+</body>
+</html>
