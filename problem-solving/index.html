@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Problem Solving — Richard Andrews</title>
+  <link rel="canonical" href="https://randr44.github.io/problem-solving/">
+  <meta name="description" content="A study guide for solving algorithmic problems through constraints, patterns, invariants, and careful traces.">
+  <meta name="author" content="Richard A.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="/fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css?v=20260927">
+  <link rel="stylesheet" href="/css/prism-dark.css">
+  <link rel="stylesheet" href="/css/prism-line-numbers.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div>
+        <header class="site-header">
+          <a class="site-name" href="/" aria-label="Richard Andrews home">
+            <span class="site-mark" aria-hidden="true">RA</span>
+            <span>Richard Andrews</span>
+          </a>
+
+          <nav class="site-nav" aria-label="Primary navigation">
+            <a href="/">Home</a>
+            <a href="/explore/">Explore</a>
+            <a href="/notes/">Notes</a>
+            <a href="/About">About</a>
+          </nav>
+
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false">
+            <span aria-hidden="true">&#9680;</span>
+          </button>
+          <script src="/js/theme.js"></script>
+        </header>
+
+        <div class="trans">
+          <main class="about-page problem-solving-page">
+            <section class="about-intro">
+              <p class="eyebrow">Learning path 04</p>
+              <h1>Problem solving</h1>
+              <p class="about-lead">A guide to turning an unfamiliar problem into a sequence of smaller, testable decisions.</p>
+              <p>Patterns are useful when they explain a constraint. The goal here is to recognize that constraint, choose the smallest useful state, and make the reasoning visible before optimizing the code.</p>
+            </section>
+
+            <section class="about-grid" aria-labelledby="process-title">
+              <div>
+                <p class="eyebrow">The process</p>
+                <h2 id="process-title">Understand the problem before reaching for a pattern.</h2>
+              </div>
+              <div>
+                <ol class="focus-list">
+                  <li>Restate the input, output, and constraints in plain language.</li>
+                  <li>Work through a small example by hand, including an edge case.</li>
+                  <li>Identify what changes, what stays true, and what information is missing.</li>
+                  <li>Choose a representation that makes the next operation cheap.</li>
+                  <li>Trace the solution, then measure its time and space cost.</li>
+                </ol>
+              </div>
+            </section>
+
+            <section class="section problem-patterns" aria-labelledby="patterns-title">
+              <div class="section-heading">
+                <p class="eyebrow">Study sequence</p>
+                <h2 id="patterns-title">Patterns to recognize.</h2>
+              </div>
+              <div class="note-list">
+                <div class="note-row">
+                  <span class="note-topic">01 · Count and lookup</span>
+                  <strong>Frequency maps and sets</strong>
+                  <span class="note-meta">Trade repeated searching for constant-time lookup</span>
+                </div>
+                <div class="note-row">
+                  <span class="note-topic">02 · Range state</span>
+                  <strong>Prefix sums and difference tracking</strong>
+                  <span class="note-meta">Precompute relationships so range questions become simple</span>
+                </div>
+                <div class="note-row">
+                  <span class="note-topic">03 · Ordered movement</span>
+                  <strong>Two pointers and sliding window</strong>
+                  <span class="note-meta">Move through a sequence while preserving a useful invariant</span>
+                </div>
+                <div class="note-row">
+                  <span class="note-topic">04 · Choice and search</span>
+                  <strong>Greedy decisions and binary search</strong>
+                  <span class="note-meta">Use a local choice or an ordered search space when it is justified</span>
+                </div>
+                <div class="note-row">
+                  <span class="note-topic">05 · Explore and undo</span>
+                  <strong>Recursion and backtracking</strong>
+                  <span class="note-meta">Represent a decision tree and restore state after each branch</span>
+                </div>
+                <div class="note-row">
+                  <span class="note-topic">06 · Reuse subproblems</span>
+                  <strong>Dynamic programming</strong>
+                  <span class="note-meta">Define state, transition, base case, and the work worth remembering</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="about-grid" aria-labelledby="evidence-title">
+              <div>
+                <p class="eyebrow">For every future note</p>
+                <h2 id="evidence-title">Make the reasoning inspectable.</h2>
+              </div>
+              <div>
+                <p>A finished note should show the first naive idea, the constraint it fails on, the pattern that addresses that constraint, and a trace that a reader can follow line by line.</p>
+                <p>Only then should it compare complexity and discuss whether the extra state or preprocessing is worth the cost.</p>
+                <p><a class="text-link" href="/notes/">See the current notebook <span aria-hidden="true">&#8594;</span></a></p>
+              </div>
+            </section>
+          </main>
+
+          <div class="row mt-2">
+            <div class="eight columns">
+              <p id="madewith">Made with &hearts; and <a href="https://hexo.io" target="_blank" rel="noreferrer">Hexo</a> at <a href="https://en.wikipedia.org/wiki/Earth" target="_blank" rel="noreferrer">Earth</a>.</p>
+            </div>
+            <div class="four columns mb-3 posisi">
+              <a class="ml-0 footer-link icon" href="https://github.com/randr44" target="_blank" rel="noreferrer" aria-label="GitHub">GitHub</a>
+              <a class="ml-0 footer-link icon" href="https://www.linkedin.com/in/rlandrews44" target="_blank" rel="noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/nanobar.min.js"></script>
+  <script>
+    var nanobar = new Nanobar({ classname: 'nanobar', id: 'myNanobar' });
+    nanobar.go(30);
+  </script>
+</body>
+</html>
