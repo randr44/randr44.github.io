@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Foundations — Richard Andrews</title>
+  <link rel="canonical" href="https://randr44.github.io/foundations/">
+  <meta name="description" content="Foundations for reasoning about data structures and algorithms: abstraction, representation, complexity, and recursion.">
+  <meta name="author" content="Richard A.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="/fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css?v=20260927">
+  <link rel="stylesheet" href="/css/prism-dark.css">
+  <link rel="stylesheet" href="/css/prism-line-numbers.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <style>
+    a:not(.icon) {
+      text-decoration-color: #0FA0CE;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #0FA0CE 50%);
+    }
+    blockquote { border-left: 8px solid #0FA0CE; }
+    .nanobar .bar { background: #0FA0CE; }
+    .button.button-primary:hover,
+    button.button-primary:hover,
+    input[type="submit"].button-primary:hover,
+    input[type="reset"].button-primary:hover,
+    input[type="button"].button-primary:hover,
+    .button.button-primary:focus,
+    button.button-primary:focus,
+    input[type="submit"].button-primary:focus,
+    input[type="reset"].button-primary:focus,
+    input[type="button"].button-primary:focus { background-color: #0FA0CE; border-color: #0FA0CE; }
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    input[type="search"]:focus,
+    input[type="text"]:focus,
+    input[type="tel"]:focus,
+    input[type="url"]:focus,
+    input[type="password"]:focus,
+    textarea:focus,
+    select:focus { border: 1px solid #0FA0CE; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div>
+        <header class="site-header">
+          <a class="site-name" href="/" aria-label="Richard Andrews home">
+            <span class="site-mark" aria-hidden="true">RA</span>
+            <span>Richard Andrews</span>
+          </a>
+
+          <nav class="site-nav" aria-label="Primary navigation">
+            <a href="/">Home</a>
+            <a href="/#topics">Topics</a>
+            <a href="/notes/">Notes</a>
+            <a href="/About">About</a>
+          </nav>
+
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false">
+            <span id="themeIcon" aria-hidden="true">&#9680;</span>
+          </button>
+          <script src="/js/theme.js"></script>
+        </header>
+
+        <div class="trans">
+          <main class="about-page foundations-page">
+            <section class="about-intro">
+              <p class="eyebrow">Learning path 01</p>
+              <h1>Foundations</h1>
+              <p class="about-lead">What do we need to understand before choosing a data structure or technique?</p>
+              <p>We start with the ideas that make later code easier to reason about: how data is represented, how abstractions protect us from implementation details, and how to measure the cost of a solution.</p>
+            </section>
+
+            <section class="about-grid" aria-labelledby="concepts-title">
+              <div>
+                <p class="eyebrow">Start here</p>
+                <h2 id="concepts-title">Build the mental models first.</h2>
+              </div>
+              <div>
+                <p>Before working through arrays, linked lists, or a sliding-window technique, it helps to understand the questions underneath the implementation:</p>
+                <ul class="focus-list">
+                  <li>What operations does this data need to support?</li>
+                  <li>Which representation makes those operations clear?</li>
+                  <li>What does the solution cost as the input grows?</li>
+                  <li>Which details should the rest of the program be allowed to depend on?</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="about-grid" aria-labelledby="topics-title">
+              <div>
+                <p class="eyebrow">Core ideas</p>
+                <h2 id="topics-title">The foundations we will use.</h2>
+              </div>
+              <div>
+                <ul class="focus-list">
+                  <li>Data abstraction, constructors, selectors, and representation choices</li>
+                  <li>Time and space complexity as tools for comparing solutions</li>
+                  <li>Recursion, invariants, and tracing state through a program</li>
+                  <li>Abstraction barriers that let implementation change without changing use</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="about-grid" aria-labelledby="next-title">
+              <div>
+                <p class="eyebrow">Next step</p>
+                <h2 id="next-title">Put the ideas to work.</h2>
+              </div>
+              <div>
+                <p>The current sequence-based work applies these ideas to arrays and linked lists, then to linked-list traversal, sliding-window, and two-pointer techniques.</p>
+              </div>
+            </section>
+
+            <p class="archive-note">Latest note: <strong>Foundations for sequence-based problem solving</strong> <span class="note-topic">Coming soon</span></p>
+          </main>
+
+          <div class="row mt-2">
+            <div class="eight columns">
+              <p id="madewith">Made with &hearts; and <a href="https://hexo.io" target="_blank" rel="noreferrer">Hexo</a> at <a href="https://en.wikipedia.org/wiki/Earth" target="_blank" rel="noreferrer">Earth</a>.</p>
+            </div>
+            <div class="four columns mb-3 posisi">
+              <a class="ml-0 footer-link icon" href="https://github.com/randr44" target="_blank" rel="noreferrer" aria-label="GitHub">GitHub</a>
+              <a class="ml-0 footer-link icon" href="https://www.linkedin.com/in/rlandrews44" target="_blank" rel="noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/nanobar.min.js"></script>
+  <script>
+    var nanobar = new Nanobar({ classname: 'nanobar', id: 'myNanobar' });
+    nanobar.go(30);
+  </script>
+</body>
+</html>
